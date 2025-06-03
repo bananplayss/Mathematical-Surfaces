@@ -33,7 +33,7 @@ Shader "Custom/GraphShader"
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-           o.Albedo.rg = saturate(IN.worldPos.xy * 0.5 + 0.5);
+           o.Albedo = saturate(IN.worldPos * 0.5 + 0.5);
            o.Smoothness = _Smoothness;
         }
         ENDCG
